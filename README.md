@@ -2,7 +2,7 @@
   <img src="FUSED/architecture_fused.png" width="100%">
   <h1>🚀 Foundational Models Guide Best 🚀</h1>
   <h2>Source-Free Domain Adaptive Breast Cancer Detection from Mammograms</h2>
-  <p><em>This was part of my thesis titled <strong>"Domain Adaptation in Breast Cancer Detection from Mammograms"</strong>.</em> at IIT DELHI 🌟 <strong>Give it a ⭐ if you find it helpful!</strong></p>
+  <p><em>This was part of my thesis titled <strong>"Domain Adaptation in Breast Cancer Detection from Mammograms"</strong> at IIT DELHI. </em> 🌟 <strong>Give it a ⭐ if you find it helpful!</strong></p>
 </div>
 
 ---
