@@ -31,16 +31,10 @@ _**NOTE:**_
 - Make sure you have FocalNet backbone in this ```./FUSED``` directory. You can download from [this](https://drive.google.com/drive/folders/1cn_JXrFa2uCNNxC-692_74GzTGPtXMtY?usp=drive_link) link.
 
 ```
-CUDA_VISIBLE_DEVICES=1 python -m torch.distributed.launch --nproc_per_node=1 --master_port 11002 main.py \
---config_file ./weights/source_inhouse/target_inbreast/config_cfg.py --source_dataset inhouse \
---target_dataset inbreast \
---coco_path /home/keerti_km/scratch/Negroni_datasets/Coco_Data/BCD \
---pretrain_model_path ./weights/source_inhouse/source_in.pth --output_dir ./weights/source_inhouse/ \
---find_unused_params --module_type student_with_expert_module --adapt --temp 1.0 --memory_bank_size 1 \
---lambda_eckd 1.0 --init_threshold 0.06 \
---expert_embed_dir ../foundation_weights \
---conf_update_algo const_thresh
+bash Run/aiims2inbreast.sh
 ```
+For expert supervision, put --mode argument to "expert" otherwise "student_with_no_expert"
+
 
 ## (III) EVALUATION  
 _**NOTE:**_
