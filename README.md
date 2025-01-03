@@ -1,5 +1,5 @@
 <div align="center">
-<figure class="center-figure"> <img src="Fused/architecture_fused.png" width="100%"></figure>
+<figure class="center-figure"> <img src="FUSED/architecture_fused.png" width="100%"></figure>
 </div>
 # Foundational Models Guide Best: Source Free Domain Adaptive Breast Cancer Detection from Mammograms
 
