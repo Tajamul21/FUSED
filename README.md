@@ -1,3 +1,6 @@
+<div align="center">
+<figure class="center-figure"> <img src="Images/architecture.png" width="100%"></figure>
+</div>
 # Foundational Models Guide Best: Source Free Domain Adaptive Breast Cancer Detection from Mammograms
 
 This was part of my thesis titled *"Domain Adaptation in Breast Cancer Detection from Mammograms"*. 🌟 **Give a star if you like it!**
