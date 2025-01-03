@@ -1,55 +1,57 @@
 <div align="center">
-<figure class="center-figure"> <img src="FUSED/architecture_fused.png" width="100%"></figure>
+  <img src="FUSED/architecture_fused.png" width="100%">
+  <h1>🚀 Foundational Models Guide Best 🚀</h1>
+  <h2>Source-Free Domain Adaptive Breast Cancer Detection from Mammograms</h2>
+  <p><em>This was part of my thesis titled <strong>"Domain Adaptation in Breast Cancer Detection from Mammograms"</strong>.</em> 🌟 <strong>Give it a ⭐ if you find it helpful!</strong></p>
 </div>
-# Foundational Models Guide Best: Source Free Domain Adaptive Breast Cancer Detection from Mammograms
 
-This was part of my thesis titled *"Domain Adaptation in Breast Cancer Detection from Mammograms"*. 🌟 **Give a star if you like it!**
+---
 
+## 🌟 Abstract 
+We dive deep into **source-free domain adaptive object detection** (**SFDAOD**), where the source data decides to take a vacation during the adaptation phase! The goal? Adapt to an **unlabeled target domain** without any direct access to the source.
 
+Here's the twist: Standard **Student-Teacher (ST) frameworks** often lead to catastrophic teacher collapses due to source bias and domain shifts. But worry not! Enter **vision foundation models** like **CLIP**, **DINOv2**, and **SAM**—our saviors with exceptional zero-shot skills.
 
-# Abstract
-We focus on source-free domain adaptive object detection (\sfdaod), when source data is unavailable during adaptation and the model must adapt on the unlabeled target domain. Majority of approaches for the problem employ a self-supervised approach using a student-teacher (ST) framework. We observe that the performance of a student model often degrades dramatically after \sfdaod, even worse than no domain adaptation. This happens due to teacher model collapsing because of source data bias and large domain shift between source and target domains. On the other hand, vision foundation models (VFMs) such as CLIP, DINOv2, SAM have demonstrated excellent zero shot performance for various downstream tasks. While trained with distinct objectives and exhibiting unique traits, these models can be unified effectively through multi-expert distillation in a traditional \st framework. We name our approach ``Fuse, Learn and Distil'' (AFaL) framework. \afal aligns student features with expert features through a contrastive knowledge distillation. In order to get the best knowledge from the experts, we introduce a novel Expert Domain Fusion (EDF) module which learns a unified embedding and prevents mode collapse in the presence of source biases. Experiments conducted on four natural imaging datasets and two challenging medical datasets have substantiated the superior performance of AFaL compared to existing state-of-the-art methodologies.
+We propose **Fuse, Learn, and Distil (AFaL)**:
+- 📚 Align student features with experts using **contrastive knowledge distillation**.
+- 🧠 Fuse multiple expert models via the novel **Expert Domain Fusion (EDF)** module.
+- 🚀 Avoid mode collapse, handle biases, and conquer challenging domains!
 
-# Model Zoo
-Refer to [this](https://drive.google.com/drive/folders/1pudcZcTgL05-0ruIxIYHQIVWqKfgMgD6?usp=drive_link) Google Drive link to get access to, Source Pretrained weights of detector and foundation models, Config Files for detector source training and adaptation.
+🛠️ **Experiments** across **four natural imaging datasets** and **two medical datasets** prove that AFaL slays the competition with superior performance. 🔥
 
-<!--
-# Architecture
-![architecture](figs/framework.png "model arch")
--->
+---
 
-## Directory structure briefing:
+## 🏗️ Model Zoo 
+Access pretrained weights, configs, and everything cool [here](https://drive.google.com/drive/folders/1pudcZcTgL05-0ruIxIYHQIVWqKfgMgD6?usp=drive_link). 🐾
 
-```FUSED/``` Holds the code for Adaptation of FND detector.  
-```foundation_code/``` Holds the code for source training and embedding extraction to be used during adaptation.  
+---
 
-Create a ```foundation_weights/``` directory here.  
-```foundation_weights/``` will hold the weights and embeddings of foundation models.  
-
-```
+## 📁 Directory Structure
+```plaintext
 foundation_weights/
 |
 -- vitb16_clip/
 |    |-- source_dataset_1/
-|           |-- `model_best.pt`
+|           |-- model_best.pt
 |           |-- target_dataset_1/
-|               |-- `embeddings_save.npy`
+|               |-- embeddings_save.npy
 |           |-- target_dataset_2/
-|               |-- `embeddings_save.npy`
+|               |-- embeddings_save.npy
 -- vitb16_imgnet/
 |    |-- source_dataset_1/
-|           |-- `model_best.pt`
+|           |-- model_best.pt
 |           |-- target_dataset_1/
-|               |-- `embeddings_save.npy`
+|               |-- embeddings_save.npy
 |           |-- target_dataset_2/
-|               |-- `embeddings_save.npy`
+|               |-- embeddings_save.npy
 -- vitdino/
     |-- source_dataset_1/
-           |-- `model_best.pt`
+           |-- model_best.pt
            |-- target_dataset_1/
-                |-- `embeddings_save.npy`
+                |-- embeddings_save.npy
            |-- target_dataset_2/
-                |-- `embeddings_save.npy`
+                |-- embeddings_save.npy
+
 ```
 
 The files ```model_best.pt``` and ```embeddings_save.npy``` are source trained foundation model and target set embeddings of the foundation model respectively.
