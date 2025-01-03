@@ -33,7 +33,7 @@ _**NOTE:**_
 ```
 bash Run/aiims2inbreast.sh
 ```
-For expert supervision, put --mode argument to "expert" otherwise "student_with_no_expert"
+For expert supervision, put --module_type argument to "expert" otherwise "student_with_no_expert"
 
 
 ## (III) EVALUATION  
